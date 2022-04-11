@@ -1,10 +1,8 @@
-package yatalex.com;
+package yatalex;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.*;
 
-public class SimpleTest {
+public class JUnit5Tests {
 
     @BeforeAll
     static void initDB(){
@@ -13,12 +11,12 @@ public class SimpleTest {
     @BeforeEach
     void openYaPage(){
         System.out.println("###     @BeforeEach");
-        Selenide.open("https://ya.ru/");
+//        Selenide.open("https://ya.ru/");
     }
     @AfterEach
     void close(){
         System.out.println("###     @AfterEach");
-        WebDriverRunner.closeWindow();
+//        WebDriverRunner.closeWindow();
     }
     @AfterAll
     static void cleanDB() {
@@ -38,7 +36,7 @@ public class SimpleTest {
 
     @Test
     void assertTest2() {
-        System.out.println("###         @Test 3");
+        System.out.println("###         @Test 2");
 
     }
 }
